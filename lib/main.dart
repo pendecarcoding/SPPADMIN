@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:spp/screen/home/home.dart';
 import 'package:spp/screen/login/login.dart';
+import 'package:spp/theme/colors/light_colors.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor: LightColors.Blue, // navigation bar color
+    statusBarColor: LightColors.Blue, // status bar color
+  ));
   runApp(const MyApp());
 }
 

@@ -27,14 +27,14 @@ class ActiveProjectsCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(40.0),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: CircularPercentIndicator(
                 animation: true,
-                radius: 75.0,
+                radius: 30.0,
                 percent: loadingPercent,
                 lineWidth: 5.0,
                 circularStrokeCap: CircularStrokeCap.round,
