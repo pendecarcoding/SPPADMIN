@@ -108,7 +108,9 @@ class _loginstate extends State<login> {
             color: Colors.black,
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, 'home');
+        },
       ),
     );
   }
