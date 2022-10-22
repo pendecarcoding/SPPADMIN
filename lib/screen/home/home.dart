@@ -35,7 +35,7 @@ class home extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: LightColors.kLightYellow,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -124,7 +124,7 @@ class home extends StatelessWidget {
                           ),
                           SizedBox(height: 15.0),
                           TaskColumn(
-                            icon: Icons.alarm,
+                            icon: Icons.person,
                             iconBackgroundColor: LightColors.kRed,
                             title: 'Total Santri',
                             subtitle: 'Total Santri Aktif',
@@ -133,14 +133,14 @@ class home extends StatelessWidget {
                             height: 15.0,
                           ),
                           TaskColumn(
-                            icon: Icons.blur_circular,
+                            icon: Icons.maps_home_work_sharp,
                             iconBackgroundColor: LightColors.kDarkYellow,
                             title: 'Lokasi BeQuranic',
                             subtitle: 'Klick untuk membuka Peta',
                           ),
                           SizedBox(height: 15.0),
                           TaskColumn(
-                            icon: Icons.check_circle_outline,
+                            icon: Icons.announcement,
                             iconBackgroundColor: LightColors.kBlue,
                             title: 'Pengumuman',
                             subtitle: 'Pengumuman Bequranic',
@@ -158,22 +158,34 @@ class home extends StatelessWidget {
                           subheading('Fitur Aplikasi'),
                           SizedBox(height: 5.0),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
-                              ActiveProjectsCard(
-                                cardColor: LightColors.kGreen,
-                                loadingPercent: 0.25,
-                                title: 'SPP',
-                                subtitle: 'Monitoring Pembayaran SPP anak',
-                                icon: Icons.money_sharp,
-                              ),
+                              GestureDetector(
+                                  onTap: () => Navigator.pushNamed(
+                                      context, 'monitoringspp'),
+                                  child: Container(
+                                      width: 160,
+                                      child: ActiveProjectsCard(
+                                        cardColor: LightColors.kGreen,
+                                        loadingPercent: 0.25,
+                                        title: 'SPP',
+                                        subtitle:
+                                            'Monitoring Pembayaran SPP anak',
+                                        icon: Icons.money_sharp,
+                                      ))),
                               SizedBox(width: 20.0),
-                              ActiveProjectsCard(
-                                cardColor: LightColors.kRed,
-                                loadingPercent: 0.6,
-                                title: 'Kesehatan',
-                                subtitle: 'Monitoring Kesehatan anak',
-                                icon: Icons.health_and_safety,
-                              ),
+                              GestureDetector(
+                                  onTap: () => Navigator.pushNamed(
+                                      context, 'monitoringhealth'),
+                                  child: Container(
+                                      width: 160,
+                                      child: ActiveProjectsCard(
+                                        cardColor: LightColors.kRed,
+                                        loadingPercent: 0.6,
+                                        title: 'Kesehatan',
+                                        subtitle: 'Monitoring Kesehatan anak',
+                                        icon: Icons.health_and_safety,
+                                      )))
                             ],
                           ),
                         ],

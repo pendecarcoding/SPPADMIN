@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:spp/screen/home/home.dart';
 import 'package:spp/screen/login/login.dart';
+import 'package:spp/screen/monitoring/health.dart';
+import 'package:spp/screen/monitoring/spp.dart';
 import 'package:spp/theme/colors/light_colors.dart';
 
 void main() {
@@ -34,6 +36,11 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
-        routes: {'/': (context) => login(), 'home': (context) => home()});
+        routes: {
+          '/': (context) => login(),
+          'home': (context) => home(),
+          'monitoringspp': (context) => spp(),
+          'monitoringhealth': (context) => health()
+        });
   }
 }
