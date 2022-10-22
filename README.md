@@ -1,2 +1,0 @@
-# SPPADMIN
-Aplikasi SPP Admin
