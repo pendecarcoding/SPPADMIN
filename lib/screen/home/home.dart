@@ -164,6 +164,7 @@ class home extends StatelessWidget {
                                 loadingPercent: 0.25,
                                 title: 'SPP',
                                 subtitle: 'Monitoring Pembayaran SPP anak',
+                                icon: Icons.money_sharp,
                               ),
                               SizedBox(width: 20.0),
                               ActiveProjectsCard(
@@ -171,6 +172,7 @@ class home extends StatelessWidget {
                                 loadingPercent: 0.6,
                                 title: 'Kesehatan',
                                 subtitle: 'Monitoring Kesehatan anak',
+                                icon: Icons.health_and_safety,
                               ),
                             ],
                           ),

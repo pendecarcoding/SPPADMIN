@@ -6,12 +6,14 @@ class ActiveProjectsCard extends StatelessWidget {
   final double loadingPercent;
   final String title;
   final String subtitle;
+  final IconData icon;
 
   ActiveProjectsCard({
     required this.cardColor,
     required this.loadingPercent,
     required this.title,
     required this.subtitle,
+    required this.icon,
   });
 
   @override
@@ -38,12 +40,11 @@ class ActiveProjectsCard extends StatelessWidget {
                 percent: loadingPercent,
                 lineWidth: 5.0,
                 circularStrokeCap: CircularStrokeCap.round,
-                backgroundColor: Colors.white10,
+                backgroundColor: Color.fromARGB(255, 255, 184, 71),
                 progressColor: Colors.white,
-                center: Text(
-                  '${(loadingPercent * 100).round()}%',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700, color: Colors.white),
+                center: Icon(
+                  icon,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -61,8 +62,8 @@ class ActiveProjectsCard extends StatelessWidget {
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.white54,
+                    fontSize: 13.0,
+                    color: Color.fromARGB(255, 239, 239, 239),
                     fontWeight: FontWeight.w400,
                   ),
                 ),
